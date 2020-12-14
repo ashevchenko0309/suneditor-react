@@ -6354,10 +6354,10 @@ __webpack_require__.r(__webpack_exports__);
                 '</button>' +
                 '<span class="se-modal-title">' + lang.dialogBox.imageBox.title + '</span>' +
             '</div>' +
-            '<div class="se-dialog-tabs">' +
-                '<button type="button" class="_se_tab_link active" data-tab-link="image">' + lang.toolbar.image + '</button>' +
-                '<button type="button" class="_se_tab_link" data-tab-link="url">' + lang.toolbar.link + '</button>' +
-            '</div>' +
+            // '<div class="se-dialog-tabs">' +
+            //     '<button type="button" class="_se_tab_link active" data-tab-link="image">' + lang.toolbar.image + '</button>' +
+            //     '<button type="button" class="_se_tab_link" data-tab-link="url">' + lang.toolbar.link + '</button>' +
+            // '</div>' +
             '<form method="post" enctype="multipart/form-data">' +
                 '<div class="_se_tab_content _se_tab_content_image">' +
                     '<div class="se-dialog-body"><div style="border-bottom: 1px dashed #ccc;">';
@@ -6423,15 +6423,15 @@ __webpack_require__.r(__webpack_exports__);
                         '</div>' +
                     '</div>' +
                 '</div>' +
-                '<div class="_se_tab_content _se_tab_content_url" style="display: none">' +
-                    '<div class="se-dialog-body">' +
-                        '<div class="se-dialog-form">' +
-                            '<label>' + lang.dialogBox.linkBox.url + '</label><input class="se-input-form se-input-url _se_image_link" type="text" />' +
-                            '<pre class="se-link-preview"></pre>' +
-                        '</div>' +
-                        '<label><input type="checkbox" class="_se_image_link_check"/>&nbsp;' + lang.dialogBox.linkBox.newWindowCheck + '</label>' +
-                    '</div>' +
-                '</div>' +
+                // '<div class="_se_tab_content _se_tab_content_url" style="display: none">' +
+                //     '<div class="se-dialog-body">' +
+                //         '<div class="se-dialog-form">' +
+                //             '<label>' + lang.dialogBox.linkBox.url + '</label><input class="se-input-form se-input-url _se_image_link" type="text" />' +
+                //             '<pre class="se-link-preview"></pre>' +
+                //         '</div>' +
+                //         '<label><input type="checkbox" class="_se_image_link_check"/>&nbsp;' + lang.dialogBox.linkBox.newWindowCheck + '</label>' +
+                //     '</div>' +
+                // '</div>' +
                 '<div class="se-dialog-footer">' +
                     '<div>' +
                         '<label><input type="radio" name="suneditor_image_radio" class="se-dialog-btn-radio" value="none" checked>' + lang.dialogBox.basic + '</label>' +
@@ -6439,10 +6439,12 @@ __webpack_require__.r(__webpack_exports__);
                         '<label><input type="radio" name="suneditor_image_radio" class="se-dialog-btn-radio" value="center">' + lang.dialogBox.center + '</label>' +
                         '<label><input type="radio" name="suneditor_image_radio" class="se-dialog-btn-radio" value="right">' + lang.dialogBox.right + '</label>' +
                     '</div>' +
+                '<div class="se-dialog-footer">' +
+                    '<div>' + 
+                        '<button type="submit" class="se-btn-primary" title="' + lang.dialogBox.submitButton + '"><span>' + lang.dialogBox.submitButton + '</span></button>' +
+                    '</div>'
                 '</div>' +
-                '<div>' + 
-                    '<button type="submit" class="se-btn-primary" title="' + lang.dialogBox.submitButton + '"><span>' + lang.dialogBox.submitButton + '</span></button>' +
-                '</div>'
+                
             '</form>';
 
         dialog.innerHTML = html;
@@ -7449,7 +7451,7 @@ __webpack_require__.r(__webpack_exports__);
 
     _onLinkPreview: function (context, protocol, e) {
         const value = e.target.value.trim();
-        context._linkValue = this.textContent = !value ? '' : (protocol && value.indexOf('://') === -1 && value.indexOf('#') !== 0) ? protocol + value : value.indexOf('://') === -1 ? '/' + value : value;
+        context._linkValue = this.textContent = !value ? '' : protocol + value;
     },
 
     submit: function (e) {
