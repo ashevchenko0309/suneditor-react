@@ -6300,7 +6300,7 @@ __webpack_require__.r(__webpack_exports__);
         contextImage.previewSrc = image_dialog.querySelector('._se_tab_content_image .se-link-preview');
 
         /** add event listeners */
-        // image_dialog.querySelector('.se-dialog-tabs').addEventListener('click', this.openTab.bind(core));
+        image_dialog.querySelector('.se-dialog-tabs').addEventListener('click', this.openTab.bind(core));
         image_dialog.querySelector('.se-btn-primary').addEventListener('click', this.submit.bind(core));
         if (contextImage.imgInputFile) image_dialog.querySelector('.se-file-remove').addEventListener('click', this._removeSelectedFiles.bind(contextImage.imgInputFile, contextImage.imgUrlFile, contextImage.previewSrc));
         if (contextImage.imgInputFile && contextImage.imgUrlFile) contextImage.imgInputFile.addEventListener('change', this._fileInputChange.bind(contextImage));
@@ -6354,10 +6354,10 @@ __webpack_require__.r(__webpack_exports__);
                 '</button>' +
                 '<span class="se-modal-title">' + lang.dialogBox.imageBox.title + '</span>' +
             '</div>' +
-            // '<div class="se-dialog-tabs">' +
-            //     '<button type="button" class="_se_tab_link active" data-tab-link="image">' + lang.toolbar.image + '</button>' +
-            //     '<button type="button" class="_se_tab_link" data-tab-link="url">' + lang.toolbar.link + '</button>' +
-            // '</div>' +
+            '<div class="se-dialog-tabs" style="display:none;>' +
+                '<button type="button" class="_se_tab_link active" data-tab-link="image">' + lang.toolbar.image + '</button>' +
+                '<button type="button" class="_se_tab_link" data-tab-link="url">' + lang.toolbar.link + '</button>' +
+            '</div>' +
             '<form method="post" enctype="multipart/form-data">' +
                 '<div class="_se_tab_content _se_tab_content_image">' +
                     '<div class="se-dialog-body"><div style="border-bottom: 1px dashed #ccc;">';
