@@ -6300,7 +6300,7 @@ __webpack_require__.r(__webpack_exports__);
         contextImage.previewSrc = image_dialog.querySelector('._se_tab_content_image .se-link-preview');
 
         /** add event listeners */
-        image_dialog.querySelector('.se-dialog-tabs').addEventListener('click', this.openTab.bind(core));
+        // image_dialog.querySelector('.se-dialog-tabs').addEventListener('click', this.openTab.bind(core));
         image_dialog.querySelector('.se-btn-primary').addEventListener('click', this.submit.bind(core));
         if (contextImage.imgInputFile) image_dialog.querySelector('.se-file-remove').addEventListener('click', this._removeSelectedFiles.bind(contextImage.imgInputFile, contextImage.imgUrlFile, contextImage.previewSrc));
         if (contextImage.imgInputFile && contextImage.imgUrlFile) contextImage.imgInputFile.addEventListener('change', this._fileInputChange.bind(contextImage));
