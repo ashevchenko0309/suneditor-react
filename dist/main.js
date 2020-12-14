@@ -6423,15 +6423,15 @@ __webpack_require__.r(__webpack_exports__);
                         '</div>' +
                     '</div>' +
                 '</div>' +
-                // '<div class="_se_tab_content _se_tab_content_url" style="display: none">' +
-                //     '<div class="se-dialog-body">' +
-                //         '<div class="se-dialog-form">' +
-                //             '<label>' + lang.dialogBox.linkBox.url + '</label><input class="se-input-form se-input-url _se_image_link" type="text" />' +
-                //             '<pre class="se-link-preview"></pre>' +
-                //         '</div>' +
-                //         '<label><input type="checkbox" class="_se_image_link_check"/>&nbsp;' + lang.dialogBox.linkBox.newWindowCheck + '</label>' +
-                //     '</div>' +
-                // '</div>' +
+                '<div class="_se_tab_content _se_tab_content_url" style="display: none">' +
+                    '<div class="se-dialog-body">' +
+                        '<div class="se-dialog-form">' +
+                            '<label>' + lang.dialogBox.linkBox.url + '</label><input class="se-input-form se-input-url _se_image_link" type="text" />' +
+                            '<pre class="se-link-preview"></pre>' +
+                        '</div>' +
+                        '<label><input type="checkbox" class="_se_image_link_check"/>&nbsp;' + lang.dialogBox.linkBox.newWindowCheck + '</label>' +
+                    '</div>' +
+                '</div>' +
                 '<div class="se-dialog-footer">' +
                     '<div>' +
                         '<label><input type="radio" name="suneditor_image_radio" class="se-dialog-btn-radio" value="none" checked>' + lang.dialogBox.basic + '</label>' +
