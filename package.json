@@ -8,7 +8,7 @@
   },
   "main": "dist/main.js",
   "scripts": {
-    "build": "rimraf dist && webpack",
+    "build": "npm update suneditor && rimraf dist && webpack",
     "start": "parcel src/index.html"
   },
   "keywords": [
