@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "suneditor": "https://github.com/ashevchenko0309/suneditor-react"
+    "suneditor": "https://github.com/ashevchenko0309/SunEditor"
   },
   "browserslist": [
     ">0.2%",
