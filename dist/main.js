@@ -7451,7 +7451,20 @@ __webpack_require__.r(__webpack_exports__);
 
     _onLinkPreview: function (context, protocol, e) {
         const value = e.target.value.trim();
-        context._linkValue = this.textContent = !value ? '' : protocol + value;
+
+        if(!value){
+            context._linkValue = this.textContent = protocol    
+        }else{
+            if(value.indexOf(protocol) >= 0){
+                context._linkValue = this.textContent = value;
+            }else{
+                context._linkValue = this.textContent = protocol + value;
+            }
+        }
+
+        context._linkValue = this.textContent = protocol;
+
+        // context._linkValue = this.textContent = !value ? protocol : protocol + value;
     },
 
     submit: function (e) {
